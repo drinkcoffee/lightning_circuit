@@ -23,8 +23,8 @@ on my computer (Intel(R) Core(TM) i7-3770S CPU @ 3.10GHz):
 
 ## howto
 
-``docker build -t lightening .
-docker run lightening``
+``docker build -t lightening .``
+``docker run lightening``
 
 or
 
