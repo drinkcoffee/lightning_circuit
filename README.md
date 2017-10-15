@@ -1,3 +1,5 @@
+Forked from https://github.com/ebfull/lightning_circuit . The improvements are: build and run inside Docker and update libsnark fetching to match the latest version of libsnark.
+
 This simple SNARK application was made in response to a lightning-dev forum post, https://lists.linuxfoundation.org/pipermail/lightning-dev/2015-November/000309.html where AJ Towns suggested using SNARKs to implement a variant of the lightning protocol. The exact application doesn't matter too much, but in the thread there was an initial attempt at benchmarking, which seemed to suggest ridiculous numbers, like 100+MB for a proof about a single hash. So, this project was made to set the record straight about what performance could be expected.
 
 This is a SNARK implementation using libsnark for the following:
@@ -21,7 +23,12 @@ on my computer (Intel(R) Core(TM) i7-3770S CPU @ 3.10GHz):
 
 ## howto
 
-``./get-libsnark && make && ./test``
+``docker build -t lightening .
+docker run lightening``
+
+or
+
+``./doall.sh``
 
 ## anatomy
 
